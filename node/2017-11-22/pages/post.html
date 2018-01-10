@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="submit" style="width:100px;height:100px;background:#4354fe;"></div>
+    <!-- <form action="http://127.0.0.1:3000/01_post.js" method="post" enctype="multipart/form-data">
+        <input type="file" name="images">
+        <p><input type="submit" value="click"></p>
+    </form> -->
+    <form id="formdata">
+        name:
+        <input type="text" value="name">
+        <input type="file" name="images">
+        <input type="submit" value="click">
+    </form>
+    <div></div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var formElement = document.querySelector("form");
+        var formdata = new FormData(formElement);
+            console.log(formdata);
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <h2>热门</h2>
+                <ul>
+                    <li>asd</li>
+                </ul>
+            </li>
+            <li>
+                <h2>A</h2>
+                <ul>
+                    <li>薛之谦</li>
+                    <li>周杰伦</li>
+                    <li>陈奕迅</li>
+                    <li>林俊杰</li>
+                    <li>李荣浩</li>
+                    <li>TFBOYS</li>
+                    <li>qwe</li>
+                </ul>
+            </li>
+            <li>
+                <h2>B</h2>
+                <ul>
+                    <li>qwe</li>
+                    <li>qwe</li>
+                    <li>qwe</li>
+                    <li>qwe</li>
+                    <li>qwe</li>
+                    <li>qwe</li>
+                    <li>qwe</li>
+                </ul>
+            </li>
+            <li>
+                <h2>C</h2>
+                <ul>
+                    <li>qwe</li>
+                </ul>
+            </li>
+            <li>
+                <h2>D</h2>
+                <ul>
+                    <li>qwe</li>
+                </ul>
+            </li>
+            <li>
+                <h2>E</h2>
+                <ul>
+                    <li>qwe</li>
+                </ul>
+            </li>
+            <li>
+                <h2>F</h2>
+                <ul>
+                    <li>qwe</li>
+                </ul>
+            </li>
+            <li>
+                <h2>G</h2>
+                <ul>
+                    <li>qwe</li>
+                </ul>
+            </li>
+            <li>
+                <h2>H</h2>
+                <ul>
+                    <li>qwe</li>
+                </ul>
+            </li>
+            <li>
+                <h2>I</h2>
+                <ul>
+                    <li>qwe</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- <script src="index.js"></script> -->
+    <script>
+        let scrollContainer = document.querySelector('.container')
+        scrollContainer.addEventListener('scroll',function(e){
+            let scrollTop = e.target.scrollTop
+            let clientHeight = e.target.clientHeight
+            let scrollHeight = e.target.scrollHeight
+            if( scrollTop+clientHeight>=scrollHeight ){
+                console.log(1)
+            }
+        })
+        scrollContainer.addEventListener('touchmove',function(){
+            
+        })
+    </script>
+</body>
+</html>

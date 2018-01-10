@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <p>
+            <label for=""></label>name
+            <input type="text" name="username" id="username">
+        </p>
+        <p>
+            <label for="">password</label>
+            <input type="password" name="passwd" id="passwd">
+        </p>
+        <div style="width:50px;height:20px;background:#68b1c2;color:#fff;text-align:center;border-radius:5px;" id="postMsg">click</div>
+    </form>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $('#postMsg').on('click', function (e) {
+            e.preventDefault();
+            let username = $('#username').val();
+            let passwd = $('#passwd').val();
+            $.ajax({
+                url: 'http://127.0.0.1:3000/postRegist',
+                type: 'post',
+                data: {
+                    username,
+                    passwd
+                },
+                dataType: 'json',
+                success: function (result) {
+
+                },
+                error: function (err) {
+
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

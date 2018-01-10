@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>talking</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+
+        .user-avatar {
+            width: 20px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">说说</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="">
+                            全部说说
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            我的说说
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="">Action</a>
+                            </li>
+                            <li>
+                                <a href="">Another action</a>
+                            </li>
+                            <li>
+                                <a href="">Something else here</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="">Separated link</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a href="">One more separated link</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right" data-login="hasLogin" style="display:none">
+                        <li class="active">
+                            <a href="/setAvatar">
+                                欢迎登录!
+                                <p style="display: inline-block;margin: 0;">
+                                    <img src="/images/avatar/define.jpg" class="user-avatar" alt="Image">
+                                    <span id="username-login"></span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <input type="text" id="username" placeholder="name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="password" placeholder="Password" class="form-control">
+                        </div>
+                        <button type="button" id="login" class="btn btn-success">Sign in</button>
+                        <button type="button" id="regist" class="btn btn-success">Regist</button>
+                    </form>
+                </div>
+            </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Hello, world!</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron
+                and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="" role="button">Learn more &raquo;</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+                    Donec sed odio dui. </p>
+                <p>
+                    <a class="btn btn-default" href="" role="button">View details &raquo;</a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+                    Donec sed odio dui. </p>
+                <p>
+                    <a class="btn btn-default" href="" role="button">View details &raquo;</a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
+                    felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+                    massa justo sit amet risus.</p>
+                <p>
+                    <a class="btn btn-default" href="" role="button">View details &raquo;</a>
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+            <p>&copy; 2016 Company, Inc.</p>
+        </footer>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Regist</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group has-feedback" id="form-username">
+                                <label class="control-label" for="username">name</label>
+                                <input type="text" class="form-control" id="regist-username" aria-describedby="inputError2Status">
+                                <span class="form-msg"></span>
+                                <span style="display:none" id="username-icon" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                                <span id="inputError2Status" class="sr-only">(error)</span>
+                            </div>
+                            <div class="form-group has-feedback" id="form-passwd">
+                                <label class="control-label" for="password">password</label>
+                                <input type="password" class="form-control" id="regist-password" aria-describedby="inputError2Status">
+                                <span id="passwd-icon" class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                <span id="inputError2Status" class="sr-only">(error)</span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="putRegist" class="btn btn-primary">regist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script>
+        let isRepetition = true;
+        $postAjax('http://192.168.0.136:3000/checkLogin', {}, (err, result) => {
+            if (0 == result.ret) {
+                if (0 != result.data.length) {
+                    $('.user-avatar').attr('src', result.data[0].avatar);
+                    $('#username-login').html(result.data[0].name);
+                    $('form.navbar-right.navbar-form').hide(0);
+                    $('ul[data-login=hasLogin]').show(0);
+                }
+            }
+        });
+        $('#regist').on('click', function () {
+            $('.modal').modal('show');
+        });
+        $('#login').on('click', function () {
+            let url = "http://192.168.0.136:3000/userlogin";
+            let username = $('#username').val();
+            let passwd = $('#password').val();
+            if (username == '' || passwd == '') {
+                return false;
+            }
+            $postAjax(url, { username, passwd }, (err, result) => {
+                if (err) { console.log(err) }
+                else {
+                    if (0 == result.ret) {
+                        if (0 != result.data.length) {
+                            $('.user-avatar').attr('src', result.data[0].avatar);
+                            $('#username-login').html(result.data[0].name);
+                            $('form.navbar-right.navbar-form').hide(0);
+                            $('ul[data-login=hasLogin]').show(0);
+                        }
+                    }
+                }
+            });
+        });
+        $('#putRegist').on('click', function () {
+            if (!isRepetition) {
+                const registUrl = "http://192.168.0.136:3000/regist";
+                let username = $('#regist-username').val();
+                let passwd = $('#regist-password').val();
+                $postAjax(registUrl, { username, passwd }, (err, result) => {
+                    if (0 === parseInt(result.ret)) {//接口调用成功 返回正确数据
+                        if (0 === parseInt(result.data)) {//判断是否已注册
+                            isRepetition = false;
+                            $('#form-username').removeClass('has-error').addClass('has-success');
+                            $('#username-icon').removeClass('glyphicon-remove').addClass('glyphicon-ok').show(0);
+                        } else if (1 === result.data.ok) {//插入成功
+                            $('.modal').modal('hide');
+                            isRepetition = true;
+
+                        } else {//已注册或注册失败
+                            isRepetition = false;
+                            $('#form-username').removeClass('has-success').addClass('has-error');
+                            $('#username-icon').removeClass('glyphicon-ok').addClass('glyphicon-remove').show(0);
+                        }
+                    }
+                });
+            }
+        });
+        $('#regist-username').on('change', function () {
+            let url = 'http://192.168.0.136:3000/checkUser'
+            let username = $('#regist-username').val();
+            $postAjax(url, { username }, (err, result) => {
+                if (0 === parseInt(result.ret)) {
+                    if (0 === parseInt(result.data)) {
+                        isRepetition = false;
+                        $('#form-username').removeClass('has-error').addClass('has-success');
+                        $('#username-icon').removeClass('glyphicon-remove').addClass('glyphicon-ok').show(0);
+                    } else {
+                        $('#form-username').removeClass('has-success').addClass('has-error');
+                        $('#username-icon').removeClass('glyphicon-ok').addClass('glyphicon-remove').show(0);
+                    }
+                }
+            });
+        });
+        function $postAjax(url, data, callback) {
+            $.ajax({
+                url: url,
+                data: data,
+                type: 'post',
+                success: function (result) {
+                    return callback(null, result);
+                },
+                error: function (err) {
+                    return callback(err);
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

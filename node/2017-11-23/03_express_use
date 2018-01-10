@@ -1,0 +1,9 @@
+const express = require('express');
+const app = express();
+app.use('/admin',(req,res)=>{
+    console.log( req.originalUrl );
+    console.log( req.baseUrl );
+    console.log( req.path );
+    res.end();
+});
+app.listen(3000);

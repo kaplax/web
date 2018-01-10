@@ -1,0 +1,29 @@
+{
+    "uid": "0",
+    "username": "kapla",
+    "passwd": "123",
+    "avatar": "/upload/talking/avatar",
+    "sign": "...",
+    "status": 0,
+    "stime": "2017-11-28",
+    "etime": "2017-11-28"
+}
+{
+    "uid":"0",
+    "title":"this is title",
+    "content":"this is content",
+    "author":"kapla",
+    "comment":[{
+        "comm_content":"this is comment",
+        "comm_author":"xk".
+        "comm_stime":"2017-11-28",
+        "comm_status":0
+    }]
+    "stime":"2017-11-28",
+    "praise":[{
+        "praise_name":"kapla",
+        "praise_time":"2017-11-28",
+        "praise_status":0
+    }],
+    status:0
+}

@@ -1,0 +1,35 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.swiper-container{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    .swiper-wrapper{
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        display: flex;
+        flex-wrap: nowrap;
+        transition-property: transform;
+        -webkit-transition-property: -webkit-transform;        
+    }
+    .swiper-slide{
+        flex-shrink: 0;
+        box-sizing: border-box;
+        text-align: center;
+        width: 100%;
+        height: 600px;
+    }
+    .swiper-slide:first-child{
+        background: #ec4561
+    }
+    .swiper-slide:nth-child(2){
+        background: #c25ddb
+    }
+    .swiper-slide:nth-child(3){
+        background: #6addd3
+    }
+}

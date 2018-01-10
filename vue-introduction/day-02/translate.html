@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity .5s
+        }
+
+        .fade-enter,
+        .fade-leave-to
+        /* .fade-leave-active in below version 2.1.8 */
+
+            {
+            opacity: 0
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo">
+        <button v-on:click="toggleComm">
+            Toggle
+        </button>
+        <transition name="fade" mode="out-in">
+            <div :is="toggleCommpont"></div>
+        </transition>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        let commA = {
+            template: '<p>commpont A</p>',
+        }
+        let commB = {
+            template: '<p>commpont B</p>'
+        }
+        new Vue({
+            el: '#demo',
+            data: {
+                show: true,
+                toggleCommpont: 'commA'
+            },
+            methods: {
+                showComm() {
+                    this.show = !this.show
+                },
+                toggleComm() {
+                    this.toggleCommpont = this.toggleCommpont === 'commA' ? 'commB' : 'commA';
+                }
+            }
+            ,
+            components: {
+                commA,
+                commB
+            }
+        })
+    </script>
+</body>
+
+</html>

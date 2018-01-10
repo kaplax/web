@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>我是一个socket连接</h1>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+    </script>
+    <script type="module">
+        import * as module from '/js/utils.mjs';
+        module.default();
+        // → logs 'Hi from the default export!'
+        module.doStuff();
+        // → logs 'Doing stuff…'
+    </script>
+</body>
+
+</html>

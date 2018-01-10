@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="imgcontainer"></div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // const url = 'https://www.pcddapi.com/api/v0/pay/payAust.api'
+        data = {
+            amount: 58,
+            userName: 'deanwen258',
+            type: 2,
+            token: '9b063676b56146997ff2e93c0da02d57'
+        }
+        var url = 'https://www.pcddapi.com/api/v0/pay/payAust.api';
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url, true);
+        xhr.responseType = "blob";
+        xhr.setRequestHeader("Content-type", "application/json");
+        xhr.onload = function () {
+            if (this.status == 200) {
+                var blob = this.response;
+                var img = document.createElement("img");
+                img.onload = function (e) {
+                    window.URL.revokeObjectURL(img.src);
+                };
+                img.src = window.URL.createObjectURL(blob);
+                $("#imgcontainer").html(img);
+            }
+        }
+        xhr.send(JSON.stringify(data));
+    </script>
+</body>
+
+</html>

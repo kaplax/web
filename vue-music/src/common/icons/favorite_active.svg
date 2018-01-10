@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="16px" viewBox="0 0 18 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>favorite_xuanzhong</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-323.000000, -429.000000)">
+        <g id="list" transform="translate(16.000000, 412.000000)" fill="#FA5252">
+            <path d="M316,20 C315.33,18.268 313.453,17 311.5,17 C308.957,17 307,18.932 307,21.5 C307,25.029 310.793,27.758 316,33 C321.207,27.758 325,25.029 325,21.5 C325,18.932 323.043,17 320.5,17 C318.545,17 316.67,18.268 316,20 Z" id="favorite_xuanzhong"></path>
+        </g>
+    </g>
+</svg>

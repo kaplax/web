@@ -1,0 +1,15 @@
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+// app.set('view engine', 'ejs');
+app.engine('html',require('ejs').renderFile);
+app.use(bodyParser.urlencoded({extended:false}));
+app.get('/', (req, res) => {
+    res.render('form');
+});
+app.post('/', (req, res) => {
+    console.log( req.body );
+    console.log( typeof req.body );
+    res.end();
+});
+app.listen(3000);

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@0.8.1/dist/vue-material.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        .phone-viewport {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+        body {
+            /* Disables pull-to-refresh but allows overscroll glow effects. */
+            overscroll-behavior-y: contain;
+          }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        
+        <div class="phone-viewport">
+            <md-bottom-bar   class="md-primary">
+                <md-bottom-bar-item md-icon="ondemand_video">Movies</md-bottom-bar-item>
+                <md-bottom-bar-item md-icon="music_note">Music</md-bottom-bar-item>
+                <md-bottom-bar-item md-icon="books" md-active>Books</md-bottom-bar-item>
+                <md-bottom-bar-item md-icon="photo">Pictures</md-bottom-bar-item>
+            </md-bottom-bar>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vue-material@0.8.1/dist/vue-material.js"></script>
+    <script>
+        Vue.use(VueMaterial);
+        Vue.material.registerTheme('default', {
+            primary: {
+                color: 'indigo',
+                hue: 'A200'
+            },
+            accent: {
+                color: 'pink',
+                hue: 300
+            }
+        })
+        var app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    message: 'hello'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

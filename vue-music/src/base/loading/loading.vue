@@ -1,0 +1,61 @@
+<template>
+    <div class="loading">
+        <i class="img-loading"></i>
+        <p class="desc" v-if="showTitle">{{title}}</p>
+    </div>
+</template>
+<script>
+export default {
+  props: {
+    title: {
+      type: String,
+      default: 'loading...'
+    },
+    showTitle: {
+        type: Boolean,
+        default: true
+    }
+  }
+}
+</script>
+<style lang="less" scoped>
+.loading {
+    text-align: center;
+
+    .desc {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .img-loading {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        animation: loading 1s steps(12, end) infinite;
+        background-image: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 100 100'%3E%3Cpath fill='none' d='M0 0h100v100H0z'/%3E%3Crect xmlns='http://www.w3.org/2000/svg' width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.56)' rx='5' ry='5' transform='translate(0 -30)'/%3E%3Crect width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.5)' rx='5' ry='5' transform='rotate(30 105.98 65)'/%3E%3Crect width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.43)' rx='5' ry='5' transform='rotate(60 75.98 65)'/%3E%3Crect width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.38)' rx='5' ry='5' transform='rotate(90 65 65)'/%3E%3Crect width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.32)' rx='5' ry='5' transform='rotate(120 58.66 65)'/%3E%3Crect width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.28)' rx='5' ry='5' transform='rotate(150 54.02 65)'/%3E%3Crect width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.25)' rx='5' ry='5' transform='rotate(180 50 65)'/%3E%3Crect width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.2)' rx='5' ry='5' transform='rotate(-150 45.98 65)'/%3E%3Crect width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.17)' rx='5' ry='5' transform='rotate(-120 41.34 65)'/%3E%3Crect width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.14)' rx='5' ry='5' transform='rotate(-90 35 65)'/%3E%3Crect width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.1)' rx='5' ry='5' transform='rotate(-60 24.02 65)'/%3E%3Crect width='7' height='20' x='46.5' y='40' fill='rgba(0,0,0,.03)' rx='5' ry='5' transform='rotate(-30 -5.98 65)'/%3E%3C/svg%3E");
+        background-size: 100%;
+
+        @keyframes loading {
+            0% {
+                transform: rotate3d(0, 0, 1, 0deg);
+            }
+
+            100% {
+                transform: rotate3d(0, 0, 1, 360deg);
+            }
+        }
+
+        @keyframes loading {
+            0% {
+                transform: rotate3d(0, 0, 1, 0deg);
+            }
+
+            100% {
+                transform: rotate3d(0, 0, 1, 360deg);
+            }
+        }
+    }
+}
+</style>
+

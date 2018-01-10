@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>talking</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="form">
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile" name="avatar_img">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Regist</h4>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="putRegist" class="btn btn-primary">regist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script>
+        let isRepetition = true;
+        $("input[type='file']").on('change',function (e) {
+            var formData = new FormData($('#form')[0]);
+            $.ajax({
+                url: "http://192.168.0.136:3000/setAvatar",
+                type: "POST",
+                data: formData,
+                async: false,
+                success: function (msg) {
+                    console.log( msg );
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+            e.preventDefault();
+        });
+        $postAjax('http://192.168.0.136:3000/checkLogin', {}, (err, result) => {
+            if (0 == result.ret) {
+                if (0 != result.data.length) {
+                    $('.user-avatar').attr('src', result.data[0].avatar);
+                    $('#username-login').html(result.data[0].name);
+                    $('form.navbar-right.navbar-form').hide(0);
+                    $('ul[data-login=hasLogin]').show(0);
+                }
+            }
+        });
+        function $postAjax(url, data, callback) {
+            $.ajax({
+                url: url,
+                data: data,
+                type: 'post',
+                success: function (result) {
+                    return callback(null, result);
+                },
+                error: function (err) {
+                    return callback(err);
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

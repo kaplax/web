@@ -1,0 +1,30 @@
+.icon {
+  font-family: 'Material Icons';
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+  align-items: center;
+  vertical-align: middle;
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  white-space: normal;
+  text-rendering: optimizeLegibility;
+  direction: ltr;
+  text-transform: none;
+  fill: currentColor;
+  margin: auto;
+  font-style: normal;
+}
+.icon-favorite-active {
+  color: #e91e63;
+}
+.icon.icon-small {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+.icon-white {
+  color: #fff;
+}
